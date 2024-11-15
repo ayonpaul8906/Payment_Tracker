@@ -1,8 +1,8 @@
 const students = [
-    { name: 'Alice', lastPayment: null },
-    { name: 'Bob', lastPayment: null },
-    { name: 'Charlie', lastPayment: null },
-    { name: 'David', lastPayment: null }
+    { name: 'Raima', lastPayment: null },
+    { name: 'Khushi', lastPayment: null },
+    { name: 'Sonaxi', lastPayment: null },
+    { name: 'Piyush', lastPayment: null }
 ];
 
 const tableBody = document.getElementById('paymentTableBody');
