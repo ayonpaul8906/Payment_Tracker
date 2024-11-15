@@ -15,12 +15,29 @@ const monthNames = [
     "July", "August", "September", "October", "November", "December"
 ];
 
-// Populate initial student records with fixed names
-students.forEach(student => addStudentRow(student));
+// Load students from localStorage or fallback to default
+function loadStudents() {
+    const storedStudents = localStorage.getItem('students');
+    if (storedStudents) {
+        return JSON.parse(storedStudents);
+    }
+    return students;
+}
+
+// Save students to localStorage
+function saveStudents() {
+    localStorage.setItem('students', JSON.stringify(students));
+}
+
+// Populate initial student records from stored data
+function populateStudents() {
+    const studentsData = loadStudents();
+    tableBody.innerHTML = ''; // Clear existing rows
+    studentsData.forEach(student => addStudentRow(student));
+}
 
 function addStudentRow(student) {
     const row = tableBody.insertRow();
-
     row.innerHTML = `
         <td><button onclick="selectStudent('${student.name}')" class="edit-btn">${student.name}</button></td>
         <td class="amount">${student.lastPayment ? student.lastPayment.amount : 'N/A'}</td>
@@ -62,6 +79,7 @@ paymentForm.addEventListener('submit', (event) => {
         row.querySelector('.date').textContent = date;
     }
 
+    saveStudents(); // Save data to localStorage
     paymentForm.reset();
     selectedStudent = null;
     currentStudentName.textContent = 'Student';
@@ -80,5 +98,12 @@ function deletePayment(name) {
             row.querySelector('.month').textContent = 'N/A';
             row.querySelector('.date').textContent = 'N/A';
         }
+
+        saveStudents(); // Save updated data to localStorage
     }
 }
+
+// Initialize the page by loading student data from localStorage
+window.onload = function () {
+    populateStudents();
+};
