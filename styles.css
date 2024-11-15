@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Table Section */
+.table-section h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background-color: #6a67ce;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table td {
+    color: #555;
+}
+
+.edit-btn {
+    color: #4a90e2;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: color 0.3s;
+}
+
+.edit-btn:hover {
+    color: #2a6bbf;
+}
+
+.delete-btn {
+    color: #e74c3c;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #c0392b;
+}
+
+/* Form Section */
+.form-section {
+    display: none;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="number"], input[type="month"], input[type="date"] {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 90%;
+    max-width: 300px;
+    transition: border 0.3s;
+}
+
+input[type="number"]:focus, input[type="month"]:focus, input[type="date"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: none;
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #3b7abb;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    /* Table Styles */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 8px 5px;
+    }
+
+    table th {
+        font-size: 1rem;
+    }
+
+    /* Adjust row padding for small screens */
+    table td {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    /* Adjust input and button widths for mobile */
+    input[type="number"], input[type="month"], input[type="date"], button[type="submit"] {
+        width: 100%;
+        max-width: unset;
+        margin: 8px 0;
+    }
+
+    .form-section form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Smaller padding and font size adjustments */
+    .form-section h2 {
+        font-size: 1.2rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .edit-btn, .delete-btn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}

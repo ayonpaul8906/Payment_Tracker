@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Payment Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Payment Tracker</h1>
+        </header>
+        
+        <section class="table-section">
+            <h2>Monthly Payment Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Last Payment Amount</th>
+                        <th>Last Payment Month</th>
+                        <th>Last Payment Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentTableBody">
+                    <!-- Student records with payment details -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="form-section" id="paymentFormSection">
+            <h2>Add Payment for <span id="currentStudentName">Student</span></h2>
+            <form id="paymentForm">
+                <input type="number" id="amount" placeholder="Amount" required>
+                <input type="month" id="month" required>
+                <input type="date" id="date" required>
+                <button type="submit">Add Payment</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
