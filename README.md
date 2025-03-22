@@ -29,7 +29,8 @@ Payment Tracker is a practical web application designed to help educational inst
 
 ## 📸 Screenshots
 
-![App Screenshot](https://i.postimg.cc/ThMKYBYZ/payment.png)
+![image](https://github.com/user-attachments/assets/cd8803dd-6392-47bf-96ba-0099a8fd07b3)
+
 
 
 
