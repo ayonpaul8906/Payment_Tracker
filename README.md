@@ -49,6 +49,27 @@ Payment_Tracker/
 ├── script.js      # JavaScript for handling payments  
 └── README.md      # Project documentation  
 
+## Installation and Usage
+
+To run this project locally, follow these steps:
+
+### 1. Clone the Repository  
+Open your terminal and execute the following command:  
+
+```bash
+git clone https://github.com/ayonpaul8906/Payment_Tracker.git
+```
+### 2. Navigate to the Project Directory
+Move into the project folder:
+``` bash
+cd Payment_Tracker
+```
+### 3. Open the Index File
+Launch the **index.html** file in your preferred web browser to start using the Payment Tracker.
+
+```vbnet
+# Open the file in a browser manually or use a live server extension in VS Code
+```
 ## 🤝 Contributing
 
 Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
