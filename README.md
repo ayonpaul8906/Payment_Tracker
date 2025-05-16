@@ -1,4 +1,3 @@
-
 # Payment Tracker 💰📊
 
 A simple, user-friendly tool for tracking student payment records.
